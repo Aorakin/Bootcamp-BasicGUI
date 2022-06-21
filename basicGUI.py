@@ -65,17 +65,17 @@ def sumdata ():
 
 GUI = Tk()
 GUI.geometry('500x300')
-GUI.title('โปรแกรมของโอ๊ค')
+GUI.title('โปรแกรมคำนวณทุเรียน v.0.0.0.1')
 
 #file = PhotoImage(file='duriann.png')
 #IMG = Label(GUI,image= file,text='')
 #IMG.pack()
-#บรรทัดพวกนี้ไฟล์รูปใช้ไม่ได้
+#ไฟล์รูปใช้ไม่ได้
 
 L1= Label(GUI,text = 'โปรแกรมคำนวณทุเรียน',font= ('Harlow Solid',28,'bold'), fg='blue')
 L1.pack() #.place(x,y) , .grid(row=o,column=0)
 
-L2= Label(GUI,text = 'กรุณากรอกจำนวนทุเรียน',font= ('Harlow Solid',20))
+L2= Label(GUI,text = 'กรุณากรอกจำนวนทุเรียน(กิโลกรัม)',font= ('Harlow Solid',20))
 L2.pack()
 
 v_quantity = StringVar() #ตำแหน่งตัวแปรที่ใข้เก็บข้อมูลของช่องกรอก
@@ -127,6 +127,7 @@ def SummaryData(event):
 
 
 GUI.bind('<F1>',SummaryData)
+GUI.bind('<F2>',SummaryData)
 
 E1.focus()#ให้cursor ไปตำแหน่งของe1
 
